@@ -48,7 +48,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
@@ -104,6 +104,38 @@ const Projects = () => {
               </Card>
             );
           })}
+        </div>
+
+        {/* More Projects Section */}
+        <div className="text-center">
+          <Card className="max-w-2xl mx-auto shadow-lg">
+            <CardContent className="p-8">
+              <Github className="h-16 w-16 text-slate-600 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                View More Projects
+              </h3>
+              <p className="text-slate-600 mb-6">
+                Explore my complete portfolio of projects, including open-source contributions, 
+                personal experiments, and collaborative work on GitHub.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-slate-800 hover:bg-slate-900 text-white"
+                asChild
+              >
+                <a
+                  href="https://github.com/hariom-p02"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2"
+                >
+                  <Github className="h-5 w-5" />
+                  <span>Visit My GitHub</span>
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
